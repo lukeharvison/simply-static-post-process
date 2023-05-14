@@ -432,11 +432,6 @@ if __name__ == "__main__":
         else params["callback_deploy_url"]
     )
 
-    page_404 = (
-        params["page_404"][0]
-        if isinstance(params["page_404"], list)
-        else params["page_404"]
-    )
 
     page_redirects = (
         params["page_redirects"][0]
@@ -495,7 +490,6 @@ if __name__ == "__main__":
         sspp.download_zip_file()
         sspp.create_output_folder()
         sspp.extract_zip_file()
-        sspp.fix_404_error_page()
         sspp.fix_home_page()
         sspp.build_search_index()
         sspp.create_redirect_toml_file()
